@@ -7,7 +7,7 @@ class Baraja
         pinta_array = []
         @cartas = []
 
-        200.times do
+        500.times do
             pinta1 = Carta.pinta
             numero1 = Carta.numero
             numbers_array << numero1
