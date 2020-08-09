@@ -13,14 +13,9 @@ class Carta
     end
 end
 
-# cards_array = []
-# 5.times do
-#     pinta1 = Carta.pinta
-#     numero1 = Carta.numero
-#     cards_array.push Carta.new(numero1,pinta1)   
-# end
 
-# print cards_array.inspect
+
+
 
 
 

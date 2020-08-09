@@ -6,13 +6,20 @@ class Baraja
         numbers_array = []
         pinta_array = []
         @cartas = []
-        150.times do
+
+        200.times do
             pinta1 = Carta.pinta
             numero1 = Carta.numero
             numbers_array << numero1
             pinta_array << pinta1 
             @cartas = numbers_array.uniq.product(pinta_array.uniq) 
+        end 
+        
+        if @cartas.count != 52
+            puts 'Error al generar baraja'
+            @cartas = []
         end
+
     end
     def barajar
         @cartas = @cartas.shuffle
@@ -26,15 +33,15 @@ class Baraja
     
 end
 
-a = Baraja.new
-print a.inspect
+baraja1 = Baraja.new
+print baraja1.cartas
 puts "\n"
 puts "\n"
-print a.barajar
+print baraja1.barajar
 puts "\n"
 puts "\n"
-print a.sacar
+print baraja1.sacar
 puts "\n"
 puts "\n"
-print a.repartir
+print baraja1.repartir
 
