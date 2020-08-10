@@ -3,23 +3,9 @@ require_relative 'carta'
 class Baraja
     attr_accessor :cartas
     def initialize(cartas=0)
-        numbers_array = []
-        pinta_array = []
-        @cartas = []
-
-        500.times do
-            pinta1 = Carta.pinta
-            numero1 = Carta.numero
-            numbers_array << numero1
-            pinta_array << pinta1 
-            @cartas = numbers_array.uniq.product(pinta_array.uniq) 
-        end 
-        
-        if @cartas.count != 52
-            puts 'Error al generar baraja'
-            @cartas = []
-        end
-
+        @numero = [1,2,3,4,5,6,7,8,9,10,11,12,13]
+        @pinta = ['C','D','P','T']
+        @cartas = @numero.product(@pinta)
     end
     def barajar
         @cartas = @cartas.shuffle
